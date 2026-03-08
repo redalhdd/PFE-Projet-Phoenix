@@ -15,7 +15,6 @@ from myhdl import block, Signal, intbv, ResetSignal, delay, instance, StopSimula
 from datapath import Datapath, ext, out
 
 PERIOD = 10  # ns
-
 NB_FSM_CYCLES  = 4
 NB_ITERATIONS  = 4
 NB_WAIT_CYCLES = NB_FSM_CYCLES * NB_ITERATIONS + 10
@@ -53,11 +52,11 @@ def testbench():
 
         # Vérification
         print("=== Résultats (itération 0 : i=1, acc=0) ===")
-        print(f"  out_arith_addi_0_1_8 = {int(out.arith_addi_0_1_8)} (attendu 2  → i+1)")
-        print(f"  out_arith_muli_4_6_7 = {int(out.arith_muli_4_6_7)} (attendu 35 → acc après itération 1)")
+        print(f"  out_arith_addi_0_1_8     = {int(out.arith_addi_0_1_8)} (attendu 2  → i+1)")
+        print(f"  out_arith_muli_id4_id6_7 = {int(out.arith_muli_id4_id6_7)} (attendu 35 → acc après itération 1)")
 
         ok_add = int(out.arith_addi_0_1_8) == 2
-        ok_mul = int(out.arith_muli_4_6_7) == 35
+        ok_mul = int(out.arith_muli_id4_id6_7) == 35
 
         if ok_add and ok_mul:
             print("\n✓ Tous les résultats sont corrects !")
