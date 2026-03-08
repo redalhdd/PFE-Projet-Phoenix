@@ -1,0 +1,13 @@
+{
+  "resource_limits": {
+    "ADD_I": 2,
+    "MUL_I": 1,
+    "ADD_F": 1
+  },
+  "op_to_resource": {
+    "arith.addi": "ADD_I",
+    "arith.muli": "MUL_I",
+    "arith.addf": "ADD_F",
+    "func.return": "ADD_I"
+  }
+}

@@ -1,0 +1,363 @@
+{
+  "Cycle 0": {
+    "add_i_0": {
+      "operation": "arith.addi_8",
+      "iteration": 0,
+      "inputs": [
+        "phi_0_1",
+        "const_i32_1_c_15"
+      ],
+      "output": [
+        "arith_addi_0_1_8"
+      ]
+    },
+    "add_i_1": {},
+    "mul_i_0": {
+      "operation": "arith.muli_3",
+      "iteration": 0,
+      "inputs": [
+        "const_i32_5_c_13",
+        "phi_0_1"
+      ],
+      "output": [
+        "arith_muli_5_0_3"
+      ]
+    },
+    "add_f_0": {},
+    "no_resource": {
+      "operation": "const:i32 1_c_15",
+      "iteration": -1,
+      "inputs": [
+        "external_input"
+      ],
+      "output": [
+        "const_i32_1_c_15"
+      ]
+    }
+  },
+  "Cycle 1": {
+    "add_i_0": {
+      "operation": "arith.addi_4",
+      "iteration": 0,
+      "inputs": [
+        "phi_01_0",
+        "arith_muli_5_0_3"
+      ],
+      "output": [
+        "arith_addi_01_3_4"
+      ]
+    },
+    "add_i_1": {},
+    "mul_i_0": {
+      "operation": "arith.muli_5",
+      "iteration": 0,
+      "inputs": [
+        "phi_0_1",
+        "const_i32_2_c_14"
+      ],
+      "output": [
+        "arith_muli_0_2_5"
+      ]
+    },
+    "add_f_0": {}
+  },
+  "Cycle 2": {
+    "add_i_0": {
+      "operation": "arith.addi_6",
+      "iteration": 0,
+      "inputs": [
+        "arith_muli_0_2_5",
+        "const_i32_5_c_13"
+      ],
+      "output": [
+        "arith_addi_5_5_6"
+      ]
+    },
+    "add_i_1": {},
+    "mul_i_0": {},
+    "add_f_0": {}
+  },
+  "Cycle 3": {
+    "add_i_0": {},
+    "add_i_1": {},
+    "mul_i_0": {
+      "operation": "arith.muli_7",
+      "iteration": 0,
+      "inputs": [
+        "arith_addi_01_3_4",
+        "arith_addi_5_5_6"
+      ],
+      "output": [
+        "arith_muli_4_6_7"
+      ]
+    },
+    "add_f_0": {}
+  },
+  "Cycle 4": {
+    "add_i_0": {
+      "operation": "arith.addi_8",
+      "iteration": 1,
+      "inputs": [
+        "phi_0_1",
+        "const_i32_1_c_15"
+      ],
+      "output": [
+        "arith_addi_0_1_8"
+      ]
+    },
+    "add_i_1": {},
+    "mul_i_0": {
+      "operation": "arith.muli_3",
+      "iteration": 1,
+      "inputs": [
+        "const_i32_5_c_13",
+        "phi_0_1"
+      ],
+      "output": [
+        "arith_muli_5_0_3"
+      ]
+    },
+    "add_f_0": {}
+  },
+  "Cycle 5": {
+    "add_i_0": {
+      "operation": "arith.addi_4",
+      "iteration": 1,
+      "inputs": [
+        "phi_01_0",
+        "arith_muli_5_0_3"
+      ],
+      "output": [
+        "arith_addi_01_3_4"
+      ]
+    },
+    "add_i_1": {},
+    "mul_i_0": {
+      "operation": "arith.muli_5",
+      "iteration": 1,
+      "inputs": [
+        "phi_0_1",
+        "const_i32_2_c_14"
+      ],
+      "output": [
+        "arith_muli_0_2_5"
+      ]
+    },
+    "add_f_0": {}
+  },
+  "Cycle 6": {
+    "add_i_0": {
+      "operation": "arith.addi_6",
+      "iteration": 1,
+      "inputs": [
+        "arith_muli_0_2_5",
+        "const_i32_5_c_13"
+      ],
+      "output": [
+        "arith_addi_5_5_6"
+      ]
+    },
+    "add_i_1": {},
+    "mul_i_0": {},
+    "add_f_0": {}
+  },
+  "Cycle 7": {
+    "add_i_0": {},
+    "add_i_1": {},
+    "mul_i_0": {
+      "operation": "arith.muli_7",
+      "iteration": 1,
+      "inputs": [
+        "arith_addi_01_3_4",
+        "arith_addi_5_5_6"
+      ],
+      "output": [
+        "arith_muli_4_6_7"
+      ]
+    },
+    "add_f_0": {}
+  },
+  "Cycle 8": {
+    "add_i_0": {
+      "operation": "arith.addi_8",
+      "iteration": 2,
+      "inputs": [
+        "phi_0_1",
+        "const_i32_1_c_15"
+      ],
+      "output": [
+        "arith_addi_0_1_8"
+      ]
+    },
+    "add_i_1": {},
+    "mul_i_0": {
+      "operation": "arith.muli_3",
+      "iteration": 2,
+      "inputs": [
+        "const_i32_5_c_13",
+        "phi_0_1"
+      ],
+      "output": [
+        "arith_muli_5_0_3"
+      ]
+    },
+    "add_f_0": {}
+  },
+  "Cycle 9": {
+    "add_i_0": {
+      "operation": "arith.addi_4",
+      "iteration": 2,
+      "inputs": [
+        "phi_01_0",
+        "arith_muli_5_0_3"
+      ],
+      "output": [
+        "arith_addi_01_3_4"
+      ]
+    },
+    "add_i_1": {},
+    "mul_i_0": {
+      "operation": "arith.muli_5",
+      "iteration": 2,
+      "inputs": [
+        "phi_0_1",
+        "const_i32_2_c_14"
+      ],
+      "output": [
+        "arith_muli_0_2_5"
+      ]
+    },
+    "add_f_0": {}
+  },
+  "Cycle 10": {
+    "add_i_0": {
+      "operation": "arith.addi_6",
+      "iteration": 2,
+      "inputs": [
+        "arith_muli_0_2_5",
+        "const_i32_5_c_13"
+      ],
+      "output": [
+        "arith_addi_5_5_6"
+      ]
+    },
+    "add_i_1": {},
+    "mul_i_0": {},
+    "add_f_0": {}
+  },
+  "Cycle 11": {
+    "add_i_0": {},
+    "add_i_1": {},
+    "mul_i_0": {
+      "operation": "arith.muli_7",
+      "iteration": 2,
+      "inputs": [
+        "arith_addi_01_3_4",
+        "arith_addi_5_5_6"
+      ],
+      "output": [
+        "arith_muli_4_6_7"
+      ]
+    },
+    "add_f_0": {}
+  },
+  "Cycle 12": {
+    "add_i_0": {
+      "operation": "arith.addi_8",
+      "iteration": 3,
+      "inputs": [
+        "phi_0_1",
+        "const_i32_1_c_15"
+      ],
+      "output": [
+        "arith_addi_0_1_8"
+      ]
+    },
+    "add_i_1": {},
+    "mul_i_0": {
+      "operation": "arith.muli_3",
+      "iteration": 3,
+      "inputs": [
+        "const_i32_5_c_13",
+        "phi_0_1"
+      ],
+      "output": [
+        "arith_muli_5_0_3"
+      ]
+    },
+    "add_f_0": {}
+  },
+  "Cycle 13": {
+    "add_i_0": {
+      "operation": "arith.addi_4",
+      "iteration": 3,
+      "inputs": [
+        "phi_01_0",
+        "arith_muli_5_0_3"
+      ],
+      "output": [
+        "arith_addi_01_3_4"
+      ]
+    },
+    "add_i_1": {},
+    "mul_i_0": {
+      "operation": "arith.muli_5",
+      "iteration": 3,
+      "inputs": [
+        "phi_0_1",
+        "const_i32_2_c_14"
+      ],
+      "output": [
+        "arith_muli_0_2_5"
+      ]
+    },
+    "add_f_0": {}
+  },
+  "Cycle 14": {
+    "add_i_0": {
+      "operation": "arith.addi_6",
+      "iteration": 3,
+      "inputs": [
+        "arith_muli_0_2_5",
+        "const_i32_5_c_13"
+      ],
+      "output": [
+        "arith_addi_5_5_6"
+      ]
+    },
+    "add_i_1": {},
+    "mul_i_0": {},
+    "add_f_0": {}
+  },
+  "Cycle 15": {
+    "add_i_0": {},
+    "add_i_1": {},
+    "mul_i_0": {
+      "operation": "arith.muli_7",
+      "iteration": 3,
+      "inputs": [
+        "arith_addi_01_3_4",
+        "arith_addi_5_5_6"
+      ],
+      "output": [
+        "arith_muli_4_6_7"
+      ]
+    },
+    "add_f_0": {}
+  },
+  "Cycle 16": {
+    "add_i_0": {
+      "operation": "func.return_9",
+      "iteration": 4,
+      "inputs": [
+        "phi_01_0"
+      ],
+      "output": [
+        "func_return_9"
+      ]
+    },
+    "add_i_1": {},
+    "mul_i_0": {},
+    "add_f_0": {}
+  }
+}

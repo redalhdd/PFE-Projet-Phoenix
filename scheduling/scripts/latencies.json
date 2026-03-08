@@ -1,0 +1,6 @@
+{
+  "arith.addi": { "t_su": 5, "latency": 1, "t_co": 0 },
+  "arith.muli": { "t_su": 10, "latency": 1, "t_co": 0 },
+  "arith.constant": { "t_su": 0, "latency": 1, "t_co": 0 },
+  "func.return": { "t_su": 0, "latency": 1, "t_co": 0 }
+}
