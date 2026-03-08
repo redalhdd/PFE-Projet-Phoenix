@@ -20,5 +20,5 @@ Avant de pouvoir utiliser notre outil, il vous faudra installer plusieurs module
 Ainsi que GDKWave pour pouvoir réaliser les simulations sur le code VHDL final.
 
 Pour utiliser ce outil il vous suffit de lancer le script run_outils.sh et passer en paramètre le path vers un fichier C.
-Vous avez un exemple déjà présent dans le repertoire /exemples à la racine du projet et vous pouvez utiliser cet exemple avec notre outils via la commande :
-    './run_outils /exemples/ex1.c
+Vous avez un exemple déjà présent dans le repertoire exemples à la racine du projet et vous pouvez utiliser cet exemple avec notre outils via la commande :
+    './run_outils exemples/ex1.c'
