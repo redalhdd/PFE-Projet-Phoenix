@@ -7,10 +7,6 @@ from fsm import make_fsm
 from parser_hls import parse_schedule_json
 import json
 import sys
-import os
-
-# Chemin vers schedule.json passé en argument ou par défaut
-SCHEDULE_PATH = sys.argv[1] if len(sys.argv) > 1 else "schedule.json"
 
 class Operation:
     def __init__(self, op_type, operator_id, dest, src1, src2, cycle):
@@ -52,12 +48,13 @@ def pick_mux(nb):
     return mux8
 
 # ---------- PARSING ----------
-with open(SCHEDULE_PATH, "r") as f:
+schedule_file = sys.argv[1]
+with open(schedule_file, "r") as f:
     data = json.load(f)
 
 ops, add_ids, mul_ids, nb_iterations = parse_schedule_json(data)
 
-print(f"Opérations chargées depuis {SCHEDULE_PATH} :")
+print("Opérations chargées depuis schedule.json :")
 for op in ops:
     print(f"  {op.op_type} [{op.operator_id}] {op.dest} = {op.src1}, {op.src2} (cycle {op.cycle})")
 print()
