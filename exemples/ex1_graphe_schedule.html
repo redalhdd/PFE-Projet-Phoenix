@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>List Scheduling</title>
+<style>
+  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          margin: 20px; background-color: #f5f5f5; }
+  h1   { color: #333; text-align: center; }
+  .info { background-color: #e3f2fd; padding: 10px; border-radius: 5px;
+           margin-bottom: 20px; }
+  table { border-collapse: collapse; width: 100%; background-color: white;
+           box-shadow: 0 2px 4px rgba(0,0,0,.1); }
+  th   { background-color: #1976d2; color: white; padding: 12px;
+          text-align: left; font-weight: bold; }
+  td   { padding: 8px 12px; border-bottom: 1px solid #ddd;
+          border-right: 1px solid #eee; vertical-align: top; }
+  td:last-child { border-right: none; }
+  tr:hover { filter: brightness(0.97); }
+  .cycle-hdr { font-weight: bold; white-space: nowrap; }
+  .trivial  { color: #999; font-style: italic; font-size: 0.82em; margin-top: 4px; }
+  .op-cell  { border-radius: 4px; padding: 4px 7px; margin-bottom: 4px;
+               font-family: 'Courier New', monospace; font-size: 0.9em; }
+  .op-name  { font-weight: 700; color: #b71c1c; }
+  .op-meta  { color: #555; font-size: 0.82em; }
+  .legend   { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+  .leg-item { padding: 4px 12px; border-radius: 12px; font-size: 0.85em;
+               border: 1px solid #ccc; }
+</style></head><body>
+<h1>List Scheduling</h1>
+<div class="info">
+  <strong>Clock Period:</strong> 14.0 ns<br>
+  <strong>Total Cycles:</strong> 17<br>
+  <strong>Total Opérations:</strong> 36<br>
+  <strong>Total Nœuds:</strong> 18<br>
+  <strong>Initiation Interval (II):</strong> 4 cycles<br><strong>Nombre d'itérations (N):</strong> 4<br>
+</div>
+<div class="legend"><div class="leg-item" style="background:#f0f0f0">Statique / Triviaux</div><div class="leg-item" style="background:#fff3e0">Itération 0</div><div class="leg-item" style="background:#e8f5e9">Itération 1</div><div class="leg-item" style="background:#e3f2fd">Itération 2</div><div class="leg-item" style="background:#fce4ec">Itération 3</div><div class="leg-item" style="background:#f3e5f5">Épilogue / Return</div></div>
+<table><thead><tr><th>Cycle</th><th>ADD_I#0</th><th>ADD_I#1</th><th>MUL_I#0</th><th>ADD_F#0</th></tr></thead><tbody>
+<tr><td class='cycle-hdr'>Cycle 0<div class='trivial'><span style="background:#f0f0f0;padding:1px 4px;border-radius:3px;">const:i32 0_c_10</span><br><span style="background:#f0f0f0;padding:1px 4px;border-radius:3px;">phi:.01_0</span><br><span style="background:#f0f0f0;padding:1px 4px;border-radius:3px;">const:i32 1_c_11</span><br><span style="background:#f0f0f0;padding:1px 4px;border-radius:3px;">phi:.0_1</span><br><span style="background:#f0f0f0;padding:1px 4px;border-radius:3px;">const:i32 5_c_12</span><br><span style="background:#f0f0f0;padding:1px 4px;border-radius:3px;">arith.icmpi (.0 < 5)_2</span><br><span style="background:#f0f0f0;padding:1px 4px;border-radius:3px;">const:i32 5_c_13</span><br><span style="background:#f0f0f0;padding:1px 4px;border-radius:3px;">const:i32 2_c_14</span><br><span style="background:#f0f0f0;padding:1px 4px;border-radius:3px;">br.seq_br_3</span><br><span style="background:#f0f0f0;padding:1px 4px;border-radius:3px;">const:i32 1_c_15</span><br><span style="background:#f0f0f0;padding:1px 4px;border-radius:3px;">br.loop_back_br_9</span></div></td><td><div class="op-cell" style="background:#fff3e0;"><div class="op-name">arith.addi (.0 + 1)_8</div><div class="op-meta">off=0.0 ns | lat=1 | iter=0</div></div></td><td></td><td><div class="op-cell" style="background:#fff3e0;"><div class="op-name">arith.muli (5 * .0)_3</div><div class="op-meta">off=0.0 ns | lat=1 | iter=0</div></div></td><td></td></tr>
+<tr><td class='cycle-hdr'>Cycle 1</td><td><div class="op-cell" style="background:#fff3e0;"><div class="op-name">arith.addi (.01 + id3)_4</div><div class="op-meta">off=0.0 ns | lat=1 | iter=0</div></div></td><td></td><td><div class="op-cell" style="background:#fff3e0;"><div class="op-name">arith.muli (.0 * 2)_5</div><div class="op-meta">off=0.0 ns | lat=1 | iter=0</div></div></td><td></td></tr>
+<tr><td class='cycle-hdr'>Cycle 2</td><td><div class="op-cell" style="background:#fff3e0;"><div class="op-name">arith.addi (id5 + 5)_6</div><div class="op-meta">off=0.0 ns | lat=1 | iter=0</div></div></td><td></td><td></td><td></td></tr>
+<tr><td class='cycle-hdr'>Cycle 3</td><td></td><td></td><td><div class="op-cell" style="background:#fff3e0;"><div class="op-name">arith.muli (id4 * id6)_7</div><div class="op-meta">off=0.0 ns | lat=1 | iter=0</div></div></td><td></td></tr>
+<tr><td class='cycle-hdr'>Cycle 4</td><td><div class="op-cell" style="background:#e8f5e9;"><div class="op-name">arith.addi (.0 + 1)_8</div><div class="op-meta">off=0.0 ns | lat=1 | iter=1</div></div></td><td></td><td><div class="op-cell" style="background:#e8f5e9;"><div class="op-name">arith.muli (5 * .0)_3</div><div class="op-meta">off=0.0 ns | lat=1 | iter=1</div></div></td><td></td></tr>
+<tr><td class='cycle-hdr'>Cycle 5</td><td><div class="op-cell" style="background:#e8f5e9;"><div class="op-name">arith.addi (.01 + id3)_4</div><div class="op-meta">off=0.0 ns | lat=1 | iter=1</div></div></td><td></td><td><div class="op-cell" style="background:#e8f5e9;"><div class="op-name">arith.muli (.0 * 2)_5</div><div class="op-meta">off=0.0 ns | lat=1 | iter=1</div></div></td><td></td></tr>
+<tr><td class='cycle-hdr'>Cycle 6</td><td><div class="op-cell" style="background:#e8f5e9;"><div class="op-name">arith.addi (id5 + 5)_6</div><div class="op-meta">off=0.0 ns | lat=1 | iter=1</div></div></td><td></td><td></td><td></td></tr>
+<tr><td class='cycle-hdr'>Cycle 7</td><td></td><td></td><td><div class="op-cell" style="background:#e8f5e9;"><div class="op-name">arith.muli (id4 * id6)_7</div><div class="op-meta">off=0.0 ns | lat=1 | iter=1</div></div></td><td></td></tr>
+<tr><td class='cycle-hdr'>Cycle 8</td><td><div class="op-cell" style="background:#e3f2fd;"><div class="op-name">arith.addi (.0 + 1)_8</div><div class="op-meta">off=0.0 ns | lat=1 | iter=2</div></div></td><td></td><td><div class="op-cell" style="background:#e3f2fd;"><div class="op-name">arith.muli (5 * .0)_3</div><div class="op-meta">off=0.0 ns | lat=1 | iter=2</div></div></td><td></td></tr>
+<tr><td class='cycle-hdr'>Cycle 9</td><td><div class="op-cell" style="background:#e3f2fd;"><div class="op-name">arith.addi (.01 + id3)_4</div><div class="op-meta">off=0.0 ns | lat=1 | iter=2</div></div></td><td></td><td><div class="op-cell" style="background:#e3f2fd;"><div class="op-name">arith.muli (.0 * 2)_5</div><div class="op-meta">off=0.0 ns | lat=1 | iter=2</div></div></td><td></td></tr>
+<tr><td class='cycle-hdr'>Cycle 10</td><td><div class="op-cell" style="background:#e3f2fd;"><div class="op-name">arith.addi (id5 + 5)_6</div><div class="op-meta">off=0.0 ns | lat=1 | iter=2</div></div></td><td></td><td></td><td></td></tr>
+<tr><td class='cycle-hdr'>Cycle 11</td><td></td><td></td><td><div class="op-cell" style="background:#e3f2fd;"><div class="op-name">arith.muli (id4 * id6)_7</div><div class="op-meta">off=0.0 ns | lat=1 | iter=2</div></div></td><td></td></tr>
+<tr><td class='cycle-hdr'>Cycle 12</td><td><div class="op-cell" style="background:#fce4ec;"><div class="op-name">arith.addi (.0 + 1)_8</div><div class="op-meta">off=0.0 ns | lat=1 | iter=3</div></div></td><td></td><td><div class="op-cell" style="background:#fce4ec;"><div class="op-name">arith.muli (5 * .0)_3</div><div class="op-meta">off=0.0 ns | lat=1 | iter=3</div></div></td><td></td></tr>
+<tr><td class='cycle-hdr'>Cycle 13</td><td><div class="op-cell" style="background:#fce4ec;"><div class="op-name">arith.addi (.01 + id3)_4</div><div class="op-meta">off=0.0 ns | lat=1 | iter=3</div></div></td><td></td><td><div class="op-cell" style="background:#fce4ec;"><div class="op-name">arith.muli (.0 * 2)_5</div><div class="op-meta">off=0.0 ns | lat=1 | iter=3</div></div></td><td></td></tr>
+<tr><td class='cycle-hdr'>Cycle 14</td><td><div class="op-cell" style="background:#fce4ec;"><div class="op-name">arith.addi (id5 + 5)_6</div><div class="op-meta">off=0.0 ns | lat=1 | iter=3</div></div></td><td></td><td></td><td></td></tr>
+<tr><td class='cycle-hdr'>Cycle 15</td><td></td><td></td><td><div class="op-cell" style="background:#fce4ec;"><div class="op-name">arith.muli (id4 * id6)_7</div><div class="op-meta">off=0.0 ns | lat=1 | iter=3</div></div></td><td></td></tr>
+<tr><td class='cycle-hdr'>Cycle 16</td><td><div class="op-cell" style="background:#f3e5f5;"><div class="op-name">func.return_9</div><div class="op-meta">off=0.0 ns | lat=1 | iter=4</div></div></td><td></td><td></td><td></td></tr>
+</tbody></table></body></html>

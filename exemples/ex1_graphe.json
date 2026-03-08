@@ -1,0 +1,171 @@
+{
+  "nodes": [
+    {
+      "id": "c_10",
+      "mnemonic": "const:i32 0",
+      "preds": [],
+      "block": "0"
+    },
+    {
+      "id": 0,
+      "mnemonic": "phi:.01",
+      "preds": [
+        "c_10"
+      ],
+      "block": "1",
+      "loop_preds": [
+        7
+      ]
+    },
+    {
+      "id": "c_11",
+      "mnemonic": "const:i32 1",
+      "preds": [],
+      "block": "0"
+    },
+    {
+      "id": 1,
+      "mnemonic": "phi:.0",
+      "preds": [
+        "c_11"
+      ],
+      "block": "1",
+      "loop_preds": [
+        8
+      ]
+    },
+    {
+      "id": "c_12",
+      "mnemonic": "const:i32 5",
+      "preds": [],
+      "block": "1"
+    },
+    {
+      "id": 2,
+      "mnemonic": "arith.icmpi (.0 < 5)",
+      "preds": [
+        1,
+        "c_12"
+      ],
+      "block": "1"
+    },
+    {
+      "id": "c_13",
+      "mnemonic": "const:i32 5",
+      "preds": [],
+      "block": "3"
+    },
+    {
+      "id": 3,
+      "mnemonic": "arith.muli (5 * .0)",
+      "preds": [
+        "c_13",
+        1
+      ],
+      "block": "3"
+    },
+    {
+      "id": 4,
+      "mnemonic": "arith.addi (.01 + id3)",
+      "preds": [
+        0,
+        3
+      ],
+      "block": "3"
+    },
+    {
+      "id": "c_14",
+      "mnemonic": "const:i32 2",
+      "preds": [],
+      "block": "3"
+    },
+    {
+      "id": 5,
+      "mnemonic": "arith.muli (.0 * 2)",
+      "preds": [
+        1,
+        "c_14"
+      ],
+      "block": "3"
+    },
+    {
+      "id": 6,
+      "mnemonic": "arith.addi (id5 + 5)",
+      "preds": [
+        5,
+        "c_13"
+      ],
+      "block": "3"
+    },
+    {
+      "id": 7,
+      "mnemonic": "arith.muli (id4 * id6)",
+      "preds": [
+        4,
+        6
+      ],
+      "block": "3"
+    },
+    {
+      "id": "br_3",
+      "mnemonic": "br.seq",
+      "preds": [
+        7
+      ],
+      "block": "3"
+    },
+    {
+      "id": "c_15",
+      "mnemonic": "const:i32 1",
+      "preds": [],
+      "block": "9"
+    },
+    {
+      "id": 8,
+      "mnemonic": "arith.addi (.0 + 1)",
+      "preds": [
+        1,
+        "c_15"
+      ],
+      "block": "9"
+    },
+    {
+      "id": "br_9",
+      "mnemonic": "br.loop_back",
+      "preds": [
+        8
+      ],
+      "block": "9"
+    },
+    {
+      "id": 9,
+      "mnemonic": "func.return",
+      "preds": [
+        0
+      ],
+      "block": "11"
+    }
+  ],
+  "edges": [
+    {
+      "from": "1",
+      "to": "3",
+      "label": "True"
+    },
+    {
+      "from": "1",
+      "to": "11",
+      "label": "False"
+    },
+    {
+      "from": "3",
+      "to": "9",
+      "label": "seq"
+    },
+    {
+      "from": "9",
+      "to": "1",
+      "label": "loop_back"
+    }
+  ]
+}
