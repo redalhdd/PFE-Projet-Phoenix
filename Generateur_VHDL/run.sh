@@ -9,7 +9,7 @@ if [ ! -f "$1" ]; then
   exit 1
 fi
 
-python testbench.py "$1"   # ← $1 entre guillemets, pas "schedule.json"
+python Generateur_VHDL/testbench.py "$1"
 
 if [ $? -ne 0 ]; then
   echo "Erreur lors de la simulation !"
