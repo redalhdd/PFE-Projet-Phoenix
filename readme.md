@@ -10,7 +10,12 @@ Pour cela nous passons par plusieurs étapes :
    Ce graphe est représenté sous la forme d'un fichier json. Cela est effectué dans le fichier "extraction_graphe.py"
 3) Ce fichier json est transformé en png pour pouvoir plus facilement visualiser le graphe en utilisant graphViz. Cela se fait dans le fichier "visu_graphe.py".
 4) Nous appliquons ensuite un algorithme de List Scheduling à ce graphe afin d'en obtenir un tableau de scheduling sous format HTMl ainsi qu'une représentation dans un format JSON pouvant être utilisée pour la génération VHDL qui va suivre.Cette étape est réalisée par le script "list_scheduling.py"
-5)
+5) Une fois le scheduling terminé la génération d'un code VHDL décrivant le comportement au niveau matérielle le comportement et les composants nécessaires à la réalisation du code C initial commence. Cette partie comporte plusieurs fichiers :-
+   - parser_hls.py : 
+   - datapath.py :  Ce fichier récupère le  lance le fichier fsm.py afin de récupérer les éléments necessaires à la synthèse complète en VHDL de du datapath ainsi que de l'UC.
+   - fsm.py : Ce fichier génère le code MyHDL de la FSM correspondante au comportement décrit dans le scheduling.
+   - testbench.py : Fichier (en dur, non générer automatiquement) servant à décrire le comportement voulu. Il lance également une simulation qui génère le fichier testbench.vcd servant à la visualisation de la simulation avec un outils type GTKWave.
+   - additionneur.py, mux.py ...etc : Fichier représentant les différents modules hardware utilisable
 
 Avant de pouvoir utiliser notre outil, il vous faudra installer plusieurs modules pythons :
 - myhdl
