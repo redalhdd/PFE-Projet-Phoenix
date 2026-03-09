@@ -1,6 +1,6 @@
 Cet outil a été réalisé par Réda Lahdoudi et Clément Nassih dans le cadre de notre projet de fin d'étude, le Projet Phoenix sous l'encadrement de monsieur Derrien. Ce projet a été réalisé lors de notre M2 Logiciel pour Systèmes Embarqués.
 
-Ce outil a pour but de passer d'un code c initial à un fichier VHDl décrivant le comportement d'un circuit représentant le code C.
+Ce outil a pour but de passer d'un code C initial à un fichier VHDL décrivant le comportement d'un circuit représentant le code C.
 
 Pour cela nous passons par plusieurs étapes :
 
