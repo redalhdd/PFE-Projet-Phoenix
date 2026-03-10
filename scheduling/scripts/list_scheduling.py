@@ -1004,7 +1004,7 @@ def main():
         ressources = os.path.join(SCRIPT_DIR, "resources_offset.json")
         res_lim, op2res = read_constraints(ressources)
     except FileNotFoundError:
-        print("ERREUR : resources_offset.json introuvable.")
+        print("ERREUR : resources.json introuvable.")
         return
 
     try:

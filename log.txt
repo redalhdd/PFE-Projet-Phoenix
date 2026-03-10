@@ -1,1 +1,0 @@
-python3: can't open file '/media/clem/SSD-Clem/master/m2/Projet_recherche/outil_final/./scheduler.sh': [Errno 2] No such file or directory
