@@ -4,8 +4,8 @@ Ce outil a pour but de passer d'un code C initial à un fichier VHDL décrivant 
 
 Pour cela nous passons par plusieurs étapes :
 
-1) le fichier C est compilé en une représentation intermédiaire (IR) optimisé grâce à LLVM et la passe mem2reg au moyen d'une ligne de commande.
-    'clang -S -emit-llvm -Xclang -disable-O0-optnone fichier.c -o - | opt -passes='mem2reg' -S -o IR.ll
+1) le fichier C est compilé en une représentation intermédiaire (IR) optimisé grâce à LLVM et la passe mem2reg au moyen d'une ligne de commande: 
+    clang -S -emit-llvm -Xclang -disable-O0-optnone fichier.c -o - | opt -passes='mem2reg' -S -o IR.ll
 2) De cette IR nous extrayons un graphe de flot de contrôle entre les différents basic blocks ainsi qu'un graphe de dépendances des différentes opérations au sein d'un basic block.
    Ce graphe est représenté sous la forme d'un fichier json. Cela est effectué dans le fichier "extraction_graphe.py"
 3) Ce fichier json est transformé en png pour pouvoir plus facilement visualiser le graphe en utilisant graphViz. Cela se fait dans le fichier "visu_graphe.py".
